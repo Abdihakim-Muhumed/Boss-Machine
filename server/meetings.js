@@ -25,14 +25,14 @@ meetingsRouter.post('/', (req, res) => {
     if(!newMeeting){
         res.status(500).send()
     }
-    res.send(newMeeting);
+    res.status(201).send(newMeeting);
 })
 
 //DELETE all meetings
 meetingsRouter.delete('/', (req, res) => {
     const deleted = deleteAllFromDatabase('meetings')
     if(!deleted){
-        res.status(500).send()
+        res.status(204).send()
     }
     res.status(200).send()
 })
