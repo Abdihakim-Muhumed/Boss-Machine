@@ -48,4 +48,6 @@ minionsRouter.delete('/:minionId', (req, res) => {
     }
     res.status(200).send('Minion deleted successfully!')
 })
+
+
 module.exports = minionsRouter;

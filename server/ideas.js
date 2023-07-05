@@ -8,7 +8,7 @@ const {
     updateInstanceInDatabase,
     deleteFromDatabasebyId,
     deleteAllFromDatabase,
-  } = require('./db.js')
+} = require('./db.js')
 // GET all ideas
 ideasRouter.get('/', (req, res, next) => {
     const ideas = getAllFromDatabase('ideas')
